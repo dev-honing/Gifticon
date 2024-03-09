@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const LoginForm = () => {
   return (
     <div>
@@ -8,7 +10,9 @@ const LoginForm = () => {
       <input type="password" placeholder="PW를 입력하세요" />
 
       <button>로그인</button>
-      <button>회원가입</button>
+      <Link href="/signup">
+        <button>회원가입</button>
+      </Link>
     </div>
   );
 };
