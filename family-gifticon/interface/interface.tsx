@@ -4,6 +4,9 @@ export interface Gift {
   category: string[]; // 기프티콘 카테고리
   expiryDate: Date; // 기프티콘 만료일
   imgURL: string; // 기프티콘 이미지 URL(S3)
+  used: '아직' | '사용함'; // 기프티콘 사용 여부
+  store: string; // 기프티콘 사용처(매장)
+  type: '할인권' | '교환권'; // 할인권 or 교환권
 }
 
 export interface GiftList {
