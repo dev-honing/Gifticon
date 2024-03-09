@@ -1,8 +1,3 @@
-// app/page.tsx
-import Header from "../components/Layouts/Header";
-import Container from "../components/Layouts/Container";
-import Footer from "@/components/Layouts/Footer";
-
 export default function MainPage() {
   return (
     <div
@@ -18,9 +13,6 @@ export default function MainPage() {
         alignItems: "center",
       }}
     >
-      <Header />
-      <Container />
-      <Footer />
     </div>
   );
 }

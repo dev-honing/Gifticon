@@ -6,13 +6,21 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <header style={{ backgroundColor: "lightblue", padding: "1rem" }}>
+          <p>Header</p>
+        </header>
+        {children}
+        <footer style={{ backgroundColor: "ghostwhite", padding: "1rem" }}>
+          <p>Footer</p>
+        </footer>
+      </body>
     </html>
-  )
+  );
 }
