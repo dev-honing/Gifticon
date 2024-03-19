@@ -13,6 +13,8 @@ export default function MainPage() {
         alignItems: "center",
       }}
     >
+      <h1>기프티콘</h1>
+      <p>기프티콘 통합 관리</p>
     </div>
   );
 }
