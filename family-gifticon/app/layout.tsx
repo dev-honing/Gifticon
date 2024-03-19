@@ -13,8 +13,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <header style={{ backgroundColor: "lightblue", padding: "1rem" }}>
-          <a href="/">Home으로</a>
+        <header style={{ backgroundColor: "lightblue", padding: "1rem", display: "flex", justifyContent:"space-between" }}>
+          <a href="/" style={{fontWeight: "bolder", fontSize: "1rem"}}>Home</a>
+          <a href="/login" style={{backgroundColor: "black", color: "white"}}>로그인</a>
         </header>
         {children}
         <footer style={{ backgroundColor: "ghostwhite", padding: "1rem" }}>
