@@ -5,7 +5,7 @@ export default function MegaCoffeeDetails({
 }) {
   return (
     <div>
-      <h1>현재 URL: /gifts/mega_coffee/{params.megaCoffeeId}</h1>
+      <h1>현재 URL: /gifts/drink/mega_coffee/{params.megaCoffeeId}</h1>
     </div>
   );
 }
