@@ -1,3 +1,4 @@
+// app/auth/signup/page.tsx
 import SignupForm from "./SignupForm";
 
 const SignupPage = () => {

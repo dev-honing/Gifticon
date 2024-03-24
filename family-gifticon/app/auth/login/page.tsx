@@ -1,4 +1,6 @@
+// app/auth/login/page.tsx
 import LoginForm from "./LoginForm";
+
 const LoginPage = () => {
   return (
     <>
