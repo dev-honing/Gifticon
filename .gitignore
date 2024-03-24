@@ -1,0 +1,7 @@
+# .gitignore
+
+# 환경변수
+.env
+
+# FastAPI
+.fast/
