@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "기프티콘",
@@ -14,7 +15,9 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <header style={{ backgroundColor: "lightblue", padding: "1rem" }}>
-          <p>Header</p>
+          <span style={{fontSize: "2rem"}}>
+          <Link href="/">메인 페이지</Link>
+          </span>
         </header>
         {children}
         <footer style={{ backgroundColor: "ghostwhite", padding: "1rem" }}>
