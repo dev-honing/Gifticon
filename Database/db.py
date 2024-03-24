@@ -3,6 +3,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import pymysql.cursors
+from dotenv import load_dotenv
+import os
 
 app = FastAPI()
 
@@ -19,16 +21,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-def read_root():
-    return {"Greet": "Hello, FastAPI World!"}
+# .env 파일로부터 환경 변수 로드
+load_dotenv()
+
+# .env 파일에서 데이터베이스 연결 정보 읽기
+DB_HOST = os.getenv("DB_HOST")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_DATABASE = os.getenv("DB_DATABASE")
 
 # MariaDB 연결 설정
 connection = pymysql.connect(
-    host='localhost',
-    user='root',
-    password='1234',
-    database='Gifticon',
+    host=DB_HOST,
+    user=DB_USER,
+    password=DB_PASSWORD,
+    database=DB_DATABASE,
     cursorclass=pymysql.cursors.DictCursor
 )
 

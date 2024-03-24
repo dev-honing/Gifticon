@@ -29,7 +29,7 @@ const GiftLists = () => {
           <p>{gift.store}</p>
           <p>{gift.expiry}</p>
           <p>{gift.type}</p>
-          <img src={gift.img} alt={gift.title} />
+          <p>{gift.img}</p>
         </div>
       ))}
     </div>
