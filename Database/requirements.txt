@@ -3,6 +3,7 @@ anyio==4.3.0
 click==8.1.7
 colorama==0.4.6
 databases==0.9.0
+dotenv-python==0.0.1
 fastapi==0.110.0
 greenlet==3.0.3
 h11==0.14.0
