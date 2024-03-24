@@ -1,21 +1,39 @@
-import { Gift, GiftList } from '../interface/interface';
+// components/GiftLists.tsx
 
-const GiftLists: React.FC<GiftList> = ({ gifts }) => { // GiftList 인터페이스로 props의 타입을 지정
+import { useEffect, useState } from 'react';
+// Gift 인터페이스 정의
+interface Gift {
+  id: number;
+  title: string;
+  store: '메가커피' | '스타벅스' | '기타';
+  expiry: string;
+  type: '교환권' | '할인권';
+  img: string;
+}
+
+const GiftLists = () => {
+  // useState의 초기값을 Gift 배열로 설정
+  const [gifts, setGifts] = useState<Gift[]>([]);
+
+  useEffect(() => {
+    fetch('http://localhost:7777/gifts')
+      .then(response => response.json())
+      .then(data => setGifts(data)); // 'gifts' 키가 없는 경우 data를 그대로 사용
+  }, []);
+
   return (
     <div>
-      {gifts.map((gift: Gift) => ( // gifts props로 각 기프티콘을 렌더링
+      {gifts.map((gift) => (
         <div key={gift.id}>
-          <h2>{gift.name}</h2>
-          <p>유형: {gift.type}</p>
-          <p>만료일: {gift.expiryDate.toISOString().substring(0, 10)}</p> {/* YYYY-MM-DD 형식의 문자열로 변환 */}
-          <p>분류: {gift.category.join(', ')}</p>
-          <p>사용처: {gift.store}</p>
-          <p>사용여부: {gift.used}</p>
-          <img src={gift.imgURL} alt={gift.name} />
+          <h2>{gift.title}</h2>
+          <p>{gift.store}</p>
+          <p>{gift.expiry}</p>
+          <p>{gift.type}</p>
+          <img src={gift.img} alt={gift.title} />
         </div>
       ))}
     </div>
   );
-};
+}
 
 export default GiftLists;
