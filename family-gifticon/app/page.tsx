@@ -1,3 +1,6 @@
+// app/page.tsx
+import Link from "next/link";
+
 export default function MainPage() {
   return (
     <div
@@ -13,6 +16,7 @@ export default function MainPage() {
         alignItems: "center",
       }}
     >
+      <Link href={"/gifts"}>기프티콘 보기</Link>
     </div>
   );
 }
