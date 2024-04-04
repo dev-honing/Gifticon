@@ -11,12 +11,14 @@ export default function MainPage() {
         boxSizing: "border-box",
         background: "#f5f5f5",
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
+        flexDirection: "row",
+        justifyContent: "space-between",
         alignItems: "center",
       }}
     >
-      <Link href={"/gifts"}>기프티콘 보기</Link>
+      
+      <Link href={"/gifts"}>조회</Link>
+      <Link href={"/upload"}>업로드</Link>
     </div>
   );
 }
