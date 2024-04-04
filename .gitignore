@@ -5,3 +5,6 @@
 
 # FastAPI
 .fast/
+
+# 모듈
+**/node_modules/
